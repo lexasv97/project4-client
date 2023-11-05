@@ -9,6 +9,7 @@ const LoginPage = () => {
     const [password, setPassword] = useState('')
     const [errorMessage, setErrorMessage] = useState(undefined);
 
+
     // const { storeToken, authenticateUser } = useContext(AuthContext)
 
     const navigate = useNavigate();
@@ -19,7 +20,7 @@ const LoginPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         const body = { email, password }
 
         post('/auth/login', body)

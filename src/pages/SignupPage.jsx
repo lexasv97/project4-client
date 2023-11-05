@@ -9,6 +9,7 @@ const SignupPage = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [occupation, setOccupation] = useState("")
+    const [isBusiness, setIsBusiness] = useState(false)
 
     const navigate = useNavigate()
 
@@ -24,7 +25,7 @@ const SignupPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const body = { name, occupation, email, password }
+        const body = { name, occupation, email, password, isBusiness }
 
         post('/auth/signup', body)
             .then((response) => {
