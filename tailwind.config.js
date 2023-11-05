@@ -4,7 +4,6 @@ export default {
     "./index.html",
     "./src/App.jsx",
     "./src/components/AddReview.jsx",
-    "./src/components/Footer.jsx",
     "./src/components/LessonCard.jsx",
     "./src/components/Navbar.jsx",
     "./src/components/PopUpMessage.jsx",

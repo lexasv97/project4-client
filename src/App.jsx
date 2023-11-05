@@ -11,17 +11,14 @@ import AddLesson from './pages/AddLesson'
 import LessonDetails from './pages/LessonDetails'
 import UpdateProfile from './pages/UpdateProfile'
 import UpdateLesson from './pages/UpdateLesson'
-import Footer from './components/Footer'
 
 function App() {
  
 
   return (
-    <div>
-      <div>
+    <div className='w-full min-h-screen bg-indigo-50'>
         <Navbar />
-      
-
+    
       <Routes>
 
         <Route path='/' element={<HomePage />} />
@@ -40,9 +37,7 @@ function App() {
 
 
       </Routes>
-      </div>
 
-      <Footer />
     </div>
   )
 }
