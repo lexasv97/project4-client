@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
-import { Routes } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
@@ -11,6 +11,7 @@ import AddLesson from './pages/AddLesson'
 import LessonDetails from './pages/LessonDetails'
 import UpdateProfile from './pages/UpdateProfile'
 import UpdateLesson from './pages/UpdateLesson'
+import Footer from './components/Footer'
 
 function App() {
  
@@ -19,7 +20,7 @@ function App() {
     <div>
       <div>
         <Navbar />
-      </div>
+      
 
       <Routes>
 
@@ -39,7 +40,9 @@ function App() {
 
 
       </Routes>
+      </div>
 
+      <Footer />
     </div>
   )
 }
