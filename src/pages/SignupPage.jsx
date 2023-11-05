@@ -41,7 +41,7 @@ const SignupPage = () => {
     return (
         <div>
             <div>
-                <span>Let’s get you logged in</span>
+                <span>Let's get you signed up</span>
 
                 <form onSubmit={handleSubmit}>
                     <div>

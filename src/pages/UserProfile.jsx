@@ -1,8 +1,21 @@
-
+import { useState, useContext, useEffect } from "react"
+import { AuthContext } from "../context/auth.context"
 
 const UserProfile = () => {
+
+    const { user, logOut } = useContext(AuthContext)
+
+    
+
   return (
-    <div>UserProfile</div>
+    <div>
+        {
+            user &&
+            <div>
+                <span>Profile</span>
+            </div>
+        }
+    </div>
   )
 }
 

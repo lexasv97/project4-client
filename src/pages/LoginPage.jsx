@@ -18,6 +18,8 @@ const LoginPage = () => {
     const handlePassword = (e) => setPassword(e.target.value)
 
     const handleSubmit = (e) => {
+        e.preventDefault();
+        
         const body = { email, password }
 
         post('/auth/login', body)
@@ -34,7 +36,7 @@ const LoginPage = () => {
     return (
         <div>
             <div>
-                <span>Let’s get you logged in</span>
+                <span>Let's get you logged in</span>
 
                 <form onSubmit={handleSubmit}>
                     <div>
