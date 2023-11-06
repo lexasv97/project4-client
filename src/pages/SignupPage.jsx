@@ -34,8 +34,9 @@ const SignupPage = () => {
                 navigate('/');
             })
             .catch((error) => {
-                const errorDescription = error.response.data.message;
-                setErrorMessage(errorDescription);
+                // const errorDescription = error.response.data.message;
+                // setErrorMessage(errorDescription);
+                console.log(error)
             })
     }
 
@@ -102,7 +103,7 @@ const SignupPage = () => {
                         </span>
                     </div>
 
-                    {errorMessage && <p className="mb-2">{errorMessage}</p>}
+                    {/* {errorMessage && <p className="mb-2">{errorMessage}</p>} */}
 
                 </form>
             </div>
