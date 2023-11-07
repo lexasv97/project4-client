@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-
+import axios from "axios"
+import { API_URL } from "../services/API_URL";
 
 const UpdateLesson = () => {
 
@@ -34,7 +35,7 @@ const UpdateLesson = () => {
 
         const body = { image, name, type, format, price, description }
 
-        put(`/lessons${lessonId}`)
+        axios.put(API_URL + `/lessons${lessonId}`)
             .then((response) => {
 
                 setImage("")

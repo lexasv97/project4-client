@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../context/auth.context"
-import { put } from "../services/authService"
+import axios from "axios"
+import { API_URL } from "../services/API_URL";
 
 const UpdateProfile = () => {
 
@@ -35,7 +36,7 @@ const UpdateProfile = () => {
 
         const body = { name, occupation, email, password, isBusiness }
 
-        put(`/users/update-profile`, body)
+        axios.put(API_URL + `/users/update-profile`, body)
             .then((response) => {
                 setName("")
                 setEmail("")

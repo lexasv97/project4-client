@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import axios from "axios"
+import { API_URL } from "../services/API_URL";
 
 const AddLesson = () => {
     const [name, setName] = useState("")
@@ -16,7 +18,7 @@ const AddLesson = () => {
 
         const body = { image, name, type, format, price, description }
 
-        post('/lessons/new', body)
+        axios.post(API_URL + '/lessons/new', body)
             .then((response) => {
 
                 setImage("")

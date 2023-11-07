@@ -1,8 +1,7 @@
 
 import { createContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
-import { get } from "../services/authService";
+import axios from "axios";
 
 const AuthContext = createContext();
 
@@ -29,7 +28,7 @@ function AuthProvider({ children }) {
         // If the token exists in the localStorage
         if (storedToken) {
             // We must send the JWT token in the request's "Authorization" Headers
-            get('/verify')
+            axios.get(API_URL + '/verify')
                 .then((response) => {
                     // If the server verifies that the JWT token is valid  
                     const user = response.data;

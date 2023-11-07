@@ -1,6 +1,7 @@
 import { useState, useContext } from "react"
 import { useNavigate, Link } from "react-router-dom";
-import { post } from "../services/authService";
+import axios from "axios";
+import { API_URL } from "../services/API_URL";
 import { AuthContext } from "../context/auth.context";
 
 const SignupPage = () => {
@@ -27,7 +28,7 @@ const SignupPage = () => {
 
         const body = { name, occupation, email, password, isBusiness }
 
-        post('/auth/signup', body)
+        axios.post(API_URL + '/auth/signup', body)
             .then((response) => {
                 // storeToken(response.data.authToken)
                 // authenticateUser()
@@ -60,7 +61,7 @@ const SignupPage = () => {
                         <select
                             name='occupation'
                             value={occupation}
-                            required
+                            // required
                             onChange={handleOccupation}
                         >
                             <option hidden default value="" disabled="disabled">Select an occupation</option>

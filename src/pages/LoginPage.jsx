@@ -1,6 +1,7 @@
 import { useState, useContext } from "react"
 import { AuthContext } from "../context/auth.context"
-import { post } from "../services/authService"
+import axios from "axios";
+import { API_URL } from "../services/API_URL";
 import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
@@ -23,7 +24,7 @@ const LoginPage = () => {
 
         const body = { email, password }
 
-        post('/auth/login', body)
+        axios.post(API_URL + '/auth/login', body)
             .then((response) => {
                 // storeToken(response.data.authToken)
                 // authenticateUser()

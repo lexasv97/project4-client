@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { get } from "../services/authService"
 import { useParams } from "react-router-dom"
+import axios from "axios"
+import { API_URL } from "../services/API_URL";
 
 const LessonDetails = () => {
 
@@ -12,7 +13,7 @@ const LessonDetails = () => {
     const navigate = useNavigate()
 
     const getLesson = (id) => {
-        get(`/lessons/${id}`)
+        axios.get(API_URL + `/lessons/${id}`)
         .then((response) => {
             setLesson(response.data)
         })
