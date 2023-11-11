@@ -10,6 +10,9 @@ const AllLessons = () => {
         <div>
             <span>All lessons:</span>
         </div>
+        <div>
+          {/* map through lessons */}
+        </div>
         </div>
     </div>
   )
