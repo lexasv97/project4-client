@@ -2,7 +2,11 @@
 
 const LessonCard = () => {
   return (
-    <div>LessonCard</div>
+    <div>
+      <div>
+        <span>Any lesson</span>
+      </div>
+    </div>
   )
 }
 

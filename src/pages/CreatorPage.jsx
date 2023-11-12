@@ -1,7 +1,11 @@
 
 const CreatorPage = () => {
   return (
-    <div>CreatorPage</div>
+    <div>
+      <div>
+        <span>Creator Page</span>
+      </div>
+    </div>
   )
 }
 

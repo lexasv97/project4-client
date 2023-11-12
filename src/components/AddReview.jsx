@@ -2,7 +2,11 @@
 
 const AddReview = () => {
   return (
-    <div>AddReview</div>
+    <div>
+      <div>
+        <span>Add Review</span>
+      </div>
+    </div>
   )
 }
 
