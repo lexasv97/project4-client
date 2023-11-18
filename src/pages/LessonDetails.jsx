@@ -43,7 +43,7 @@ const LessonDetails = () => {
           </div>
           :
           <div>
-
+            Loading...
           </div>
 
       }
