@@ -2,10 +2,6 @@ import { Link } from "react-router-dom"
 
 const Navbar = () => {
 
-    const getToken = () => {
-        return localStorage.getItem('authToken')
-    }
-
     return (
         <nav>
             <div className="h-1/6 flex justify-between px-10 py-2">
