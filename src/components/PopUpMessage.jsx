@@ -2,7 +2,11 @@
 
 const PopUpMessage = () => {
   return (
-    <div>PopUpMessage</div>
+    <div>
+      <div>
+        Pop Up Message
+      </div>
+    </div>
   )
 }
 
